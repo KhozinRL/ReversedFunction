@@ -11,7 +11,7 @@ namespace ReversedFunction
 
         public static double reversedFunction((double a, double b) boundaries, Func<double, double> function, double y, double epsilon)
         {
-            bool raising = function(boundaries.b) - function(boundaries.a) > 0 ? true : false;
+            bool raising = function(boundaries.b) - function(boundaries.a) > 0;
             double fx, accuracy;
             double leftBound = boundaries.a;
             double rightBound = boundaries.b;
