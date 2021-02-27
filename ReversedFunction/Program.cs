@@ -9,7 +9,7 @@ namespace ReversedFunction
         {
             double power = -4;
             Double epsilon = Math.Pow(10, power);
-            ReversedFunction.AccuracyUpdated += Console.WriteLine;
+            ReversedFunction.AccuracyUpdated += printResolution;
 
             //Делегат
             Func<double, double> sinDelegate = Math.Sin;
@@ -24,6 +24,10 @@ namespace ReversedFunction
             //Лямбда
             double expResult = ReversedFunction.reversedFunction((-3, 0), x => Math.Exp(-x), 9, epsilon);
             Console.WriteLine("При x = {0:f5} функция exp(-x) = 9 \n", expResult);
+        }
+
+        static void printResolution(double resolution) {
+            Console.WriteLine("Текущее разрешение: {0:f6}", resolution);
         }
  
     }
